@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  web:
+    build: docker/python
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/srv/http:rw
+    environment:
+      - APP_CONFIG_FILE=config/development.py

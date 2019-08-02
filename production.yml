@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  web:
+    build: docker/python
+    entrypoint: gunicorn -w 4 -b 0.0.0.0:5000 routes:app
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/srv/http:rw
+    environment:
+      - APP_CONFIG_FILE=config/production.py

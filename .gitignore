@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+app/config/production.py
+app/app.db
+vendor/test.db
+vendor/inference.h5
+.vscode
